@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Thu Feb 06 2014 03:32:09 GMT+0000 (UTC) -->
+<html data-wf-site="52f1e9f4add5fecd1b0003f9">
+<head>
+  <meta charset="utf-8">
+  <title>OH: Add a Question</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/office-hours.webflow.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,400,600,700,800"]
+      }
+    });
+  </script>
+  <script>
+    if (/mobile/i.test(navigator.userAgent)) document.documentElement.className += ' w-mobile';
+  </script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico">
+  <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+</head>
+<body>
+  <div class="w-nav" data-collapse="medium" data-animation="default" data-duration="400"></div>
+  <div>
+    <h2>CS145 Office Hours</h2>
+  </div>
+  <div class="w-form">
+    <form class="w-clearfix question" name="email-form" data-name="Email Form">
+      <label for="name">Problem Title:</label>
+      <input class="w-input" type="text" placeholder="e.g. 3a" name="field" required="required"></input>
+      <label for="email">Description:</label>
+      <textarea class="w-input" placeholder="Enter a short description of your problem" required="required"></textarea>
+      <label>Applicable to others?</label>
+      <select class="w-select collaboration" name="dropdown" required="required">
+        <option value="">Select one...</option>
+        <option value="First">Yup!</option>
+        <option value="Second">Nope, it's just me</option>
+      </select>
+      <input class="w-button submit" type="submit" value="Add to Queue" data-wait="Please wait..."></input>
+    </form>
+    <div class="w-form-done">
+      <p>Thank you! Your submission has been received!</p>
+    </div>
+    <div class="w-form-fail">
+      <p>Oops! Something went wrong while submitting the form :(</p>
+    </div>
+  </div>
+  <div class="w-nav navbar" data-collapse="all" data-animation="default" data-duration="400" data-contain="1">
+    <div class="w-nav-button navbarbutton">
+      <div class="buttontext">Q</div>
+    </div>
+    <div class="w-container">
+      <nav class="w-nav-menu" role="navigation"><a class="w-nav-link" href="#">Home</a><a class="w-nav-link" href="#">About</a><a class="w-nav-link" href="#">Contact</a>
+      </nav>
+      <div class="w-nav-button navbarbutton">
+        <div class="buttontext">+</div>
+      </div>
+      <div class="w-nav-button navbarbutton">
+        <div class="buttontext">ppl</div>
+      </div>
+      <div class="w-nav-button navbarbutton">
+        <div class="buttontext">cal</div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+</body>
+</html>
