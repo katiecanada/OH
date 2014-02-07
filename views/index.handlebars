@@ -29,12 +29,12 @@
   <h1>Office Hours</h1>
   <div class="login"></div>
   <div class="w-form">
-    <form class="w-clearfix login" name="email-form" data-name="Email Form">
+    <form id="loginForm" class="w-clearfix login" name="email-form" data-name="Email Form" method="get" action="/tempPage">
       <label class="email" for="name"></label>
-      <input class="w-input" type="text" placeholder="Enter your email" name="name" data-name="Name"></input>
+      <input class="w-input" type="email" placeholder="Enter your email" name="email" data-name="email"></input>
       <label class="password" for="email"></label>
-      <input class="w-input" type="email" placeholder="Enter your password" name="email" data-name="Email" required="required"></input>
-      <input class="w-button submitbutton" type="submit" value="Login" data-wait="Please wait..."></input>
+      <input class="w-input" type="password" placeholder="Enter your password" name="password" data-name="password" required="required"></input>
+      <input class="submitbutton" id="login-btn" type="submit" value="Login" data-wait="Please wait..."></input>
     </form>
     <div class="w-form-done">
       <p>Thank you! Your submission has been received!</p>

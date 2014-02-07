@@ -6,9 +6,9 @@
   <meta charset="utf-8">
   <title>OH: Add a Question</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/webflow.css">
-  <link rel="stylesheet" type="text/css" href="css/office-hours.webflow.css">
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="/css/officehours.webflow.css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script>
     WebFont.load({
@@ -26,10 +26,10 @@
 <body>
   <div class="w-nav" data-collapse="medium" data-animation="default" data-duration="400"></div>
   <div>
-    <h2>CS145 Office Hours</h2>
+    <h1>{{class}} Office Hours</h1>
   </div>
-  <div class="w-form">
-    <form class="w-clearfix question" name="email-form" data-name="Email Form">
+  <div class="">
+    <form class="w-clearfix question" name="email-form" data-name="Email Form" method="get" action="/queue/?class={{class}}">
       <label for="name">Problem Title:</label>
       <input class="w-input" type="text" placeholder="e.g. 3a" name="field" required="required"></input>
       <label for="email">Description:</label>
@@ -49,25 +49,8 @@
       <p>Oops! Something went wrong while submitting the form :(</p>
     </div>
   </div>
-  <div class="w-nav navbar" data-collapse="all" data-animation="default" data-duration="400" data-contain="1">
-    <div class="w-nav-button navbarbutton">
-      <div class="buttontext">Q</div>
-    </div>
-    <div class="w-container">
-      <nav class="w-nav-menu" role="navigation"><a class="w-nav-link" href="#">Home</a><a class="w-nav-link" href="#">About</a><a class="w-nav-link" href="#">Contact</a>
-      </nav>
-      <div class="w-nav-button navbarbutton">
-        <div class="buttontext">+</div>
-      </div>
-      <div class="w-nav-button navbarbutton">
-        <div class="buttontext">ppl</div>
-      </div>
-      <div class="w-nav-button navbarbutton">
-        <div class="buttontext">cal</div>
-      </div>
-    </div>
-  </div>
+  {{>navBar}}
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script type="text/javascript" src="js/webflow.js"></script>
+  <script type="text/javascript" src="/js/webflow.js"></script>
 </body>
 </html>
