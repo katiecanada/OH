@@ -76,8 +76,21 @@ p {
     font-family:'Open Sans', sans-serif;
     text-align: center;
   }
-
-
+  .createclassbutton {
+      width: 339px;
+      margin-right: 6px;
+      padding-right: 20px; 
+      background-color: #111125;
+      color: #00bad8;
+      text-align: center; 
+  }
+  .textfield {
+      border-left-color: #aaa;
+  }
+  .label {
+    border-left-color: #111125; 
+    font-weight: 400;
+  }
   .login {
     margin-right: 0px;
     margin-left: 0px;
