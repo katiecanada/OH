@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Wed Feb 05 2014 07:27:05 GMT+0000 (UTC) -->
-<html data-wf-site="52f1de53147dca6348000203">
+<!-- Last Published: Tue Feb 11 2014 07:23:55 GMT+0000 (UTC) -->
+<html data-wf-site="52f9c80e3ec6dfcf2f000659">
 <head>
   <meta charset="utf-8">
-  <title>OfficeHours</title>
+  <title>OH: ta analytics</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/oh-ta-analytics.webflow.css">
   <link rel="stylesheet" type="text/css" href="css/officehours.css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script>
@@ -22,9 +23,31 @@
   </script>
   <link rel="shortcut icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico">
   <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  <!--[if IE 8]><script>document.documentElement.className += ' w-ie8';</script><![endif]-->
 </head>
-
 <body>
-<p> this page will show analytics for the instructors </p>
-{{>tNavBar}}
+  <h1>CS103: Analytics</h1>
+  <div class="ohdescriptor">
+    <h4>Jan's Office Hours</h4>
+    <div class="ohspecifics">Monday, February 10</div>
+    <div class="ohspecifics">3:30-5:30 pm</div>
+    <div class="ohspecifics">Location: Huang B034</div>
+  </div>
+  <div class="graphsection">
+    <h4>Student Attendance</h4>
+    <img class="graph" src="images/graph.jpeg" alt="52f9caca3ec6dfcf2f000665_graph.jpeg">
+  </div>
+  <div class="graphsection">
+    <h4>Most Asked Questions</h4>
+    <img class="graph" src="images/bar.jpeg" alt="52f9ce503ec6dfcf2f000686_bar.jpeg">
+  </div>
+  <div class="graphsection">
+    <h4>TA Time Spent by Question</h4>
+    <img class="graph" src="images/pie%20chart.jpeg" alt="52f9cd8471bff65d140006e8_pie%20chart.jpeg">
+  </div>
+  <div></div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  {{>navBar}}
 </body>
+</html>

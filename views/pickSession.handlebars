@@ -1,30 +1,83 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Wed Feb 05 2014 07:27:05 GMT+0000 (UTC) -->
-<html data-wf-site="52f1de53147dca6348000203">
+<!-- Last Published: Sun Feb 09 2014 21:12:56 GMT+0000 (UTC) -->
+<html data-wf-site="52f7e73140e0a1e36400001b">
 <head>
   <meta charset="utf-8">
-  <title>OfficeHours</title>
+  <title>oh-calendar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="/css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="/css/oh-calendar.webflow.css">
   <link rel="stylesheet" type="text/css" href="/css/officehours.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ["Open Sans:300,400,600,700,800"]
-      }
-    });
-  </script>
   <script>
     if (/mobile/i.test(navigator.userAgent)) document.documentElement.className += ' w-mobile';
   </script>
   <link rel="shortcut icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico">
   <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
 </head>
-
 <body>
-<p> Will let you view calendar of OH times and pick one to go too. For now just pick <a href='/queue/?class={{class}}'>This One</a>
-Or choose a  <a href='/pickClass'>different class </a>
+  <div class="header">
+    <h1>CS103 Calendar</h1>
+  </div>
+  <h3>Monday, February 10</h3>
+  <div class="officehours">
+    <h4>Joe's Office Hours</h4>
+    <div class="time">9:30-10:30 am</div>
+    <div class="descriptortext">Location: Gates B025</div>
+    <div class="descriptortext">6 students attended</div>
+    <div></div>
+  </div>
+  <div class="officehours">
+    <h4>Melissa's Office Hours</h4>
+    <div class="time">11:00-12:30 pm</div>
+    <div class="descriptortext">Location: Huang 271</div>
+    <div class="descriptortext">10 students attended</div>
+  </div>
+  <div class="officehours">
+    <h4>Pat's Office Hours</h4>
+    <div class="time">3:30-5:30 pm</div>
+    <div class="descriptortext">Location: 040-026</div>
+    <div class="descriptortext">4 students attended</div>
+  </div>
+  <div class="officehours">
+    <h4>Bob's Office Hours</h4>
+    <div class="time">6:30-8:30 pm</div>
+    <div class="descriptortext">Location: Gates B031</div>
+    <div class="descriptortext">14 students attended</div>
+  </div>
+  <h3>Tuesday, February 11</h3>
+  <div class="officehours">
+    <h4>Joe's Office Hours</h4>
+    <div class="time">9:30-10:30 am</div>
+    <div class="descriptortext">Location: Gates B025</div>
+    <div class="descriptortext">14 students attended</div>
+  </div>
+  <div class="w-clearfix officehours current">
+    <h4>Pat's Office Hours</h4>
+    <div class="time">10:30-11:30 am</div>
+    <div class="descriptortext">Location: Gates B025</div>
+    <div class="descriptortext">6 students currently attending</div><a class="button attendbutton" href="#">Join!</a>
+  </div>
+  <div class="w-clearfix officehours current">
+    <h4>Jane's Office Hours</h4>
+    <div class="time">11:00 am - 1:15 pm</div>
+    <div class="descriptortext">Location: Huang 256</div>
+    <div class="descriptortext">2 students currently attending</div><a class="button attendbutton" href="#">Join!</a>
+  </div>
+  <div class="officehours upcoming">
+    <h4>Melissa's Office Hours</h4>
+    <div class="time">6:30-8:30 pm</div>
+    <div class="descriptortext">Location: Gates B031</div>
+    <div class="descriptortext"></div>
+  </div>
+  <div class="officehours upcoming">
+    <h4>Bob's Office Hours</h4>
+    <div class="time">8:30-10:30 pm</div>
+    <div class="descriptortext">Location: Gates B031</div>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/webflow.js"></script>
+{{>navBar}}
 </body>
+</html>
