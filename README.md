@@ -1,3 +1,1 @@
-OH app
-__
-CS 147 project
+A simple web app for managing office hours.
