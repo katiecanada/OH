@@ -1,0 +1,27 @@
+
+{
+"myClasses":[
+	{
+		"name":"introHCI",
+		"courseNumber":"cs147",
+		"professor":"Matt",
+		"quarter":"Winter 2014",
+		"role":"student"
+	},
+	{
+		"name":"web apps",
+		"courseNumber":"cs142",
+		"professor":"Lauren",
+		"quarter":"Winter 2014",
+		"role":"student"
+
+	},
+	{
+		"name":" Systems",
+		"courseNumber":"cs107",
+		"professor":"Lauren",
+		"quarter":"Winter 2014",
+		"role":"instructor"
+	}
+	]
+}
