@@ -1,0 +1,23 @@
+
+{
+"classes":[
+	{
+		"name":"106a",
+		"courseNumber":"106a",
+		"professor":"Matt",
+		"quarter":"Winter 2014"
+	},
+	{
+		"name":"106b",
+		"courseNumber":"106b",
+		"professor":"Lauren",
+		"quarter":"Winter 2014"
+	},
+	{
+		"name":"107",
+		"courseNumber":"107",
+		"professor":"Lauren",
+		"quarter":"Winter 2014"
+	}
+	]
+}

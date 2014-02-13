@@ -1,14 +1,33 @@
 $(document).ready(function(){
 	$("a.joinButton").click(joinQ);
+	$("a.removeButton").click(removeQ);	
+
 });
 
-/* temporary function to remove a class when user selects x button. 
-* Needs to be updated to actually remove class from db
-*/
+/*FIX BUG WITH TOGGLING BETWEEN CLICK FUNCTIONS */
+/*update json/db to indicate student has joined question*/
+
 function joinQ(e){
+		console.log($(this).attr('class'));
 	e.preventDefault();
-	console.log("here");
-	console.log($(this).parent());
-	$(this).prev().append(" <br> <br>You've been added to the question! ");
+	$(this).prev().text(" You've been added to the question! ").css("font-weight","bold").css("color", "black");
 	$(this).text('Leave Question');
+	$(this).toggleClass("joinButton removeButton");
+	$(this).parent().toggleClass("member");
+	$(this).click(removeQ);
+
+}
+
+function removeQ(e){
+	console.log($(this).attr('class'));
+
+	e.preventDefault();
+	$(this).text('Join Question');
+
+	$(this).prev().text(" You've been removed from the question! ").css("color", "#CC0000");
+	$(this).toggleClass("removeButton joinButton");
+	$(this).parent().removeClass("member");
+
+	$(this).click(joinQ);
+
 }

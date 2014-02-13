@@ -1,0 +1,21 @@
+{
+	"questions":[
+		{
+		
+				"number":"1",
+				"description":"I hate pointers",
+				"numStudents":1,
+				"group":"yes"
+		},
+			
+		{
+		
+				"number":"3",
+				"description":"recursion",
+				"numStudents":2,
+				"group":"yes"
+		}
+
+
+	]
+}

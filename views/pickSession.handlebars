@@ -24,64 +24,28 @@
   <div class="header">
     <h1>CS103 Calendar</h1>
   </div>
-  <h3>Monday, February 10</h3>
-  <div class="officehours">
-    <h4>Joe's Office Hours</h4>
-    <div class="time">9:30-10:30 am</div>
-    <div class="descriptortext">Location: Gates B025</div>
-    <div class="descriptortext">6 students attended</div>
-    <div></div>
+{{#each schedule}}
+  <h3> {{day}}</h3>
+    {{#if past}}
+     <div class="officehours">
+      {{else }}
+      {{#if current}}
+        <div class="officehours current">
+      {{else}}
+        <div class="officehours upcoming">
+      {{/if}}
+      {{/if}}
+    <h4>{{ta}}'s Office Hours</h4>
+    <div class="time">{{startTime}}-{{endTime}}</div>
+    <div class="descriptortext">Location: {{location}}</div>
+    {{#if current}}
+    <br><a class="button attendbutton" href="/queue">Join!</a>
+    <br><br>
+    {{/if}}
   </div>
-  <div class="officehours">
-    <h4>Melissa's Office Hours</h4>
-    <div class="time">11:00-12:30 pm</div>
-    <div class="descriptortext">Location: Huang 271</div>
-    <div class="descriptortext">10 students attended</div>
-  </div>
-  <div class="officehours">
-    <h4>Pat's Office Hours</h4>
-    <div class="time">3:30-5:30 pm</div>
-    <div class="descriptortext">Location: 040-026</div>
-    <div class="descriptortext">4 students attended</div>
-  </div>
-  <div class="officehours">
-    <h4>Bob's Office Hours</h4>
-    <div class="time">6:30-8:30 pm</div>
-    <div class="descriptortext">Location: Gates B031</div>
-    <div class="descriptortext">14 students attended</div>
-  </div>
-  <h3>Tuesday, February 11</h3>
-  <div class="officehours">
-    <h4>Joe's Office Hours</h4>
-    <div class="time">9:30-10:30 am</div>
-    <div class="descriptortext">Location: Gates B025</div>
-    <div class="descriptortext">14 students attended</div>
-  </div>
-  <div class="w-clearfix officehours current">
-    <h4>Pat's Office Hours</h4>
-    <div class="time">10:30-11:30 am</div>
-    <div class="descriptortext">Location: Gates B025</div>
-    <div class="descriptortext">6 students currently attending</div><a class="button attendbutton" href="#">Join!</a>
-  </div>
-  <div class="w-clearfix officehours current">
-    <h4>Jane's Office Hours</h4>
-    <div class="time">11:00 am - 1:15 pm</div>
-    <div class="descriptortext">Location: Huang 256</div>
-    <div class="descriptortext">2 students currently attending</div><a class="button attendbutton" href="#">Join!</a>
-  </div>
-  <div class="officehours upcoming">
-    <h4>Melissa's Office Hours</h4>
-    <div class="time">6:30-8:30 pm</div>
-    <div class="descriptortext">Location: Gates B031</div>
-    <div class="descriptortext"></div>
-  </div>
-  <div class="officehours upcoming">
-    <h4>Bob's Office Hours</h4>
-    <div class="time">8:30-10:30 pm</div>
-    <div class="descriptortext">Location: Gates B031</div>
-  </div>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script type="text/javascript" src="/js/webflow.js"></script>
+  {{/each}}
+
+ 
 {{>navBar}}
 </body>
 </html>

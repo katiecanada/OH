@@ -1,0 +1,20 @@
+{
+"users":[
+	{
+		"name":"Katie Redmond",
+		"email":"kredmond@stanford.edu",
+		"password":"1"
+	},
+	{
+		"name":"Matt Duhamel",
+		"email":"mduhamel@stanford.edu",
+		"password":"1"
+	},
+	{
+		"name":"Lauren Edelson",
+		"email":"ledelson@stanford.edu",
+		"password":"1"
+	}
+
+	]
+}

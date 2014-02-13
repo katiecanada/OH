@@ -33,29 +33,24 @@
   <div> <a class="button addQButton" href="/addQ/?class={{class}}"> Add a New Question to the Queue </a> </div>
   <div class="w-container sep1"></div>
 
-  <div class="w-container q1"></div>
-  <h1>Question 2</h1>
-  <p>&nbsp; &nbsp;3a. &nbsp;Recursion &nbsp;
-    <br>&nbsp; &nbsp;Parentheses Problem&nbsp;
-    <br>&nbsp; &nbsp;4 other students have similar questions&nbsp;</p><a class="button joinButton" href="#">Join Question</a>
+{{#each questions}}
+  
+{{#if member}}
+  <div class="w-container q1 member">
+{{else}}
+  <div class="w-container q1">
+{{/if}}
+  <h1>Question {{number}}</h1>
+    <br>&nbsp; &nbsp;"{{description}}"&nbsp;
+    <br>&nbsp; &nbsp;{{numStudents}} students have similar questions&nbsp;<a class="button joinButton" href="#">Join Question</a>
     <br>
     <br>
   </div>
   <div class="w-container sep1"></div>
-  <div class="w-container q3">
 
-  <h1>Question 4</h1>
-  <p>&nbsp; &nbsp;4b. Binary Trees
-    <br>&nbsp; &nbsp;Adding children to nodes&nbsp;
-    <br>&nbsp; &nbsp;8 students have a similar question</p><a class="button joinButton" href="#">Join Question</a> <br> <br>
-  </div>
-  <div class="w-container sep2"></div>
-  <div class="w-container q3">
-  <h1>Question 3</h1>
-  <p>&nbsp; &nbsp;1c. &nbsp;Backtracking
-    <br>&nbsp; &nbsp;What is the base case?&nbsp; &nbsp;</p><a class="button joinButton" href="#">Join Question</a> <br><br>
-  </div>
-  <div class="w-container sep4"></div>
+  
+{{/each}}
+
 {{>navBar}}
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

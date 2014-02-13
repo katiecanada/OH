@@ -21,34 +21,36 @@
    {{>faq}}
   <div class="headersection">
     <h1>Stanford University</h1> 
-    <h4>Welcome, {{email}}</h4>
+    <h4>Welcome</h4>
   </div>
   <h6>Check in to Office Hours for one of your classes:</h6>
-  <div class="classlist">
+  <div class="classlist" id="classList">
   <a class="classbutton button" href="pickSession/?class=cs161">CS161</a>
   <a class="button removeClass" href="#">x</a> <br>
-  <a class="classbutton button" href="pickSession/?class=cs103">CS103</a>
-  <a class="button removeClass" href="#">x</a><br>
-  <a class="classbutton button" href="pickSession/?class=cs145">CS145</a>
-  <a class="button removeClass" href="#">x</a>
+  {{#each pickClassData}}
+  {{#if myClasses}}
+  {{#each myClasses}}
+    <a class="classbutton button" href="pickSession/">{{name}}</a>
+  <a class="button removeClass" href="#">x</a> <br>
+  {{/each}}
+  {{/if}}
+  {{/each}}
   </div>
   <div class="">
-    <form name="email-form" data-name="Email Form">
+    <!--<form name="email-form" data-name="Email Form">-->
       <label for="name"> <h6> Add a new class: </h6></label>
-      <select class="w-select classselector" name="dropdown">
-        <option value="">Select one...</option>
-        <option value="First">CS106A</option>
-        <option value="Second">CS106B</option>
-        <option value="Third">CS107</option>
+      <select class="w-select classselector" name="dropdown" id="classes">
+       {{#each pickClassData}}
+      {{#if classes}}
+      {{#each classes}}
+        <option value={{name}}>{{name}}</option>
+        {{/each}}
+        {{/if}}
+        {{/each}}
       </select>
-      <input class=" submitbutton" type="submit" value="Add my class!" data-wait="Please wait..."></input>
-    </form>
-    <div class="w-form-done">
-      <p>Thank you! Your submission has been received!</p>
-    </div>
-    <div class="w-form-fail">
-      <p>Oops! Something went wrong while submitting the form :(</p>
-    </div>
+      <input class="submitbutton" id="submitPick" type="submit" value="Add my class!" ></input>
+    <!--</form>-->
+    
   </div><a class="button createaclass" href="/createClass">TA? Create a Class!</a>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>

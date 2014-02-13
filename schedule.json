@@ -1,0 +1,32 @@
+{
+"schedule":[
+{
+				"day":"Tuessday",
+				"startTime":"10am",
+				"endTime":"11am",
+				"ta":"Lauren", 
+				"status":"cancelled",
+				"location":"gates b01",
+				"past":"yes"
+			},
+			{
+				"day":"Wednesday",
+				"startTime":"8am",
+				"endTime":"10am",
+				"ta":"Katie", 
+				"status":"normal",
+				"location":"gates b01",
+				"current":"yes"
+			},
+			{
+				"day":"Thursday",
+				"startTime":"10am",
+				"endTime":"11am",
+				"ta":"Lauren", 
+				"status":"cancelled",
+				"location":"gates b01",
+				"upcoming":"yes"
+			}
+
+]
+}

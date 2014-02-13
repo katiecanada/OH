@@ -27,31 +27,17 @@
 <body>
   <h1>Create a Class</h1>
   <div class="w-form">
-    <form name="email-form" data-name="Email Form">
-      <label class="label" for="name">&nbsp; Class Number</label>
-      <input class="w-input" type="text" placeholder="Enter the official title of the class" name="name" data-name="Name"></input>
-      <label class="label" for="email">&nbsp; Class Name &nbsp;</label>
-      <input class="w-input" type="email" placeholder="Enter the name of the class" name="email" data-name="Email" required="required"></input>
-    </form>
-    <div class="w-form-done">
-      <p>Thank you! Your submission has been received!</p>
-    </div>
-    <div class="w-form-fail">
-      <p>Oops! Something went wrong while submitting the form :(</p>
-    </div>
-  </div>
-  <div class="w-form">
-    <form name="email-form" data-name="Email Form">
-      <label class="label" for="name">&nbsp; &nbsp;Professor&nbsp;</label>
-      <input class="w-input textfield" type="text" placeholder="Who teaches this class?" name="name" data-name="Name"></input>
+    <form name="email-form" data-name="Email Form" method="get" action='/pickClass'>
+      <label class="label" for="num">&nbsp; Class Number</label>
+      <input class="w-input" type="text" placeholder="Enter the official title of the class" name="num" data-name="Num" required="required"></input>
+      <label class="label" for="name">&nbsp; Class Name &nbsp;</label>
+      <input class="w-input" type="text" placeholder="Enter the name of the class" name="name" data-name="Name" required="required"></input>
+    
+      <label class="label" for="prof">&nbsp; &nbsp;Professor&nbsp;</label>
+      <input class="w-input textfield" type="text" placeholder="Who teaches this class?" name="prof" data-name="Prof"></input>
       <input class="w-button createclassbutton" type="submit" value="Create Class" data-wait="Creating class..." wait="Creating class..."></input>
     </form>
-    <div class="w-form-done">
-      <p>Thank you! Your submission has been received!</p>
-    </div>
-    <div class="w-form-fail">
-      <p>Oops! Something went wrong while submitting the form :(</p>
-    </div>
+    
   </div>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>

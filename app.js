@@ -22,6 +22,7 @@ var tempPage = require('./routes/tempPage');
 var tQueue = require('./routes/tQueue');
 var analytics = require('./routes/analytics');
 var createAccount = require('./routes/createAccount');
+var addedQ = require('./routes/addedQ');
 
 // Example route
 // var user = require('./routes/user');
@@ -56,10 +57,10 @@ app.get('/', index.view);
 app.get('/pickClass', pickClass.view);
 app.post('/pickClass', pickClass.view);
 app.get('/addQ', addQ.view);
+app.get('/addedQ', addedQ.added);
 app.get('/createClass', createClass.view);
 app.get('/faqPage', faqPage.view);
 app.get('/queue', queue.view);
-app.get('/addQ', addQ.view);
 app.get('/pickSession', pickSession.view);
 app.get('/people', people.view);
 app.get('/tempPage', tempPage.view);
