@@ -27,12 +27,18 @@
   <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
 </head>
 <body>
-  <h1>{{class}} Queue</h1>
+ {{#each data}}
+      {{#if name}}
+        <h1>{{name}} Queue</h1>
+        {{/if}}
+      {{/each}}
     <div class="w-container sep1"></div>
 
-  <div> <a class="button addQButton" href="/addQ/?class={{class}}"> Add a New Question to the Queue </a> </div>
+  <div> <a class="button addQButton" href="/addQ"> Add a New Question to the Queue </a> </div>
   <div class="w-container sep1"></div>
 
+ {{#each data}}
+ {{#if questions}}
 {{#each questions}}
   
 {{#if member}}
@@ -48,7 +54,8 @@
   </div>
   <div class="w-container sep1"></div>
 
-  
+{{/each}}
+{{/if}}
 {{/each}}
 
 {{>navBar}}

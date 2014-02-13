@@ -1,5 +1,6 @@
+var currentClass=require('../currentClass.json')
 
 exports.view = function(req, res){
-	
-	res.render('addQ');
+	console.log(currentClass);
+	res.render('addQ', currentClass);
 }

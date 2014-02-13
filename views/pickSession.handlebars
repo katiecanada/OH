@@ -22,9 +22,15 @@
 </head>
 <body>
   <div class="header">
-    <h1>CS103 Calendar</h1>
+    {{#each data}}
+      {{#if name}}
+        <h1>{{name}} Schedule</h1>
+        {{/if}}
+      {{/each}}
   </div>
-{{#each schedule}}
+  {{#each data}}
+  {{#if schedule}}
+  {{#each schedule}}
   <h3> {{day}}</h3>
     {{#if past}}
      <div class="officehours">
@@ -43,6 +49,8 @@
     <br><br>
     {{/if}}
   </div>
+  {{/each}}
+  {{/if}}
   {{/each}}
 
  
