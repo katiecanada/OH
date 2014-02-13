@@ -44,7 +44,11 @@
     <h4>{{ta}}'s Office Hours</h4>
     <div class="time">{{startTime}}-{{endTime}}</div>
     <div class="descriptortext">Location: {{location}}</div>
+    {{#if past}}
+        <div class="descriptortext">Total Attendance: {{peopleThere}}</div>
+      {{/if}}
     {{#if current}}
+      <div class="descriptortext">PeopleHere: {{peopleHere}}</div>
     <br><a class="button attendbutton" href="/queue">Join!</a>
     <br><br>
     {{/if}}

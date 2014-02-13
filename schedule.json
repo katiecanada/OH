@@ -7,7 +7,8 @@
 				"ta":"Lauren", 
 				"status":"cancelled",
 				"location":"gates b01",
-				"past":"yes"
+				"past":"yes",
+				"peopleThere":50
 			},
 			{
 				"day":"Wednesday",
@@ -16,7 +17,8 @@
 				"ta":"Katie", 
 				"status":"normal",
 				"location":"gates b01",
-				"current":"yes"
+				"current":"yes",
+				"peopleHere":10
 			},
 			{
 				"day":"Thursday",
