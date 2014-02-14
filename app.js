@@ -23,6 +23,7 @@ var tQueue = require('./routes/tQueue');
 var analytics = require('./routes/analytics');
 var createAccount = require('./routes/createAccount');
 var addedQ = require('./routes/addedQ');
+var createOH = require('./routes/createOH');
 
 // Example route
 // var user = require('./routes/user');
@@ -67,6 +68,7 @@ app.get('/tempPage', tempPage.view);
 app.get('/teacherQueue', tQueue.view);
 app.get('/analytics', analytics.view);
 app.get('/createAccount', createAccount.view);
+app.get('/createOH', createOH.view);
 // Example route
 // app.get('/users', user.list);
 
